@@ -1,0 +1,118 @@
+:root {
+  --sky-top: #02040f;
+  --sky-mid: #0a0f2e;
+  --sky-low: #1c2260;
+  --sky-glow: #46388a;
+  --text: #eaf0ff;
+  --muted: #aab4d6;
+  --accent: #ffc98b;
+  --card: rgba(255, 255, 255, 0.06);
+  --line: rgba(255, 255, 255, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--sky-top);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+  background:
+    radial-gradient(1px 1px at 12% 8%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 28% 22%, rgba(255,255,255,.8) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 46% 6%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 63% 15%, rgba(255,255,255,.7) 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 81% 9%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 92% 27%, rgba(255,255,255,.6) 50%, transparent 51%),
+    radial-gradient(1px 1px at 7% 34%, rgba(255,255,255,.6) 50%, transparent 51%),
+    radial-gradient(1px 1px at 72% 38%, rgba(255,255,255,.5) 50%, transparent 51%),
+    radial-gradient(120% 60% at 50% 110%, var(--sky-glow) 0%, transparent 60%),
+    linear-gradient(180deg, var(--sky-top) 0%, var(--sky-mid) 40%, var(--sky-low) 100%);
+  background-attachment: fixed;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+}
+
+header { text-align: center; margin-bottom: 36px; }
+
+.mark {
+  font-size: 40px;
+  line-height: 1;
+  color: var(--accent);
+  text-shadow: 0 0 24px rgba(255, 201, 139, .45);
+}
+
+.app-name {
+  margin: 12px 0 4px;
+  font-size: 14px;
+  letter-spacing: .2em;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: .06em;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px 20px 18px;
+  margin-bottom: 16px;
+}
+
+p { margin: 0 0 10px; }
+p:last-child { margin-bottom: 0; }
+
+a { color: var(--accent); word-break: break-all; }
+
+.mail {
+  display: inline-block;
+  margin: 4px 0 10px;
+  padding: 10px 18px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.note { color: var(--muted); font-size: 14px; }
+
+dl { margin: 0; }
+dt { font-weight: 600; margin-top: 18px; }
+dt:first-child { margin-top: 0; }
+dt::before { content: "Q. "; color: var(--accent); }
+dd { margin: 4px 0 0; color: #d6ddf5; }
+dd::before { content: "A. "; color: var(--muted); }
+
+footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+footer nav a { margin: 0 8px; }
+
+.date { text-align: right; color: var(--muted); font-size: 14px; margin-top: 8px; }
